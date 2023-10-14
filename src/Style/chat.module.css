@@ -1,0 +1,49 @@
+.textwrapper{
+    color: #090F1D;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    padding-left: 4px;
+}
+
+
+.iconplus{
+    border-radius: 62%;
+    background: #6BA690;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+.historytext{
+    color: rgba(9, 15, 29, 0.70);
+    /* font-family: 'Roboto', sans-serif;
+     */
+     /* font-family: 'Garet', sans-serif; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 0;
+    letter-spacing: -0.42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    /* color: rgba(9, 15, 29, 0.70);
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.42px; */
+    
+}

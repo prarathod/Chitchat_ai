@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'PlusjakartaSansBold';
+    src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+         url('../fonts//PlusJakartaSans-Bold.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PlusjakartaSansExtraBold';
+    src: url('../fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+         url('../fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PlusjakartaSansMedium';
+    src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+         url('../fonts/PlusJakartaSans-Medium.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PlusjakartaSansRegular';
+    src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+         url('../fonts/PlusJakartaSans-Regular.woff') format('woff');
+    /* Add more file formats if needed */
+    /* font-weight: normal;
+    font-style: normal; */
+    
+  }
+  @font-face {
+    font-family: 'SplineSansBold';
+    src: url('../fonts/SplineSans-Bold.woff2') format('woff2'),
+         url('../fonts/SplineSans-Bold.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SplineSansMedium';
+    src: url('../fonts/SplineSans-Medium.woff2') format('woff2'),
+         url('../fonts/SplineSans-Medium.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SplineSansRegular';
+    src: url('../fonts/SplineSans-Regular.woff2') format('woff2'),
+         url('../fonts/SplineSans-Regular.woff') format('woff');
+    /* Add more file formats if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
