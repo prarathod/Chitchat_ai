@@ -14,6 +14,8 @@ import PlusSign from "../ImageContainer/plus-square.svg";
 import MenuImg from "../ImageContainer/menu.svg";
 import closeimg from "../ImageContainer/closeimg.svg";
 import Image from "next/image";
+import SidePanel from "@/Components/SidePanel";
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,6 +26,20 @@ export default function Home() {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  //
+
+  const [sidepanelWidth, setSidepanelWidth] = useState(0);
+
+  const openNav = () => {
+    setSidepanelWidth(60);
+  }
+
+  const closeNav = () => {
+    setSidepanelWidth(0);
+  }
+
+  //
   return (
     <div className={styles.mainContainer}>
       {/* Hamberger */}
@@ -32,11 +48,9 @@ export default function Home() {
           <button
             className="navbar-toggler bg-dark"
             type="button"
-            onClick={toggleMenu}
+            onClick={()=> openNav()}
           >
-            {!menuOpen && (
-              <Image src={MenuImg} alt="My SVG Image" width={24} height={24} />
-            )}
+            <Image src={MenuImg} alt="My SVG Image" width={24} height={24} />
           </button>
         </div>
         <div>
@@ -58,7 +72,8 @@ export default function Home() {
           />
         </div>
       </nav>
-
+      <SidePanel closeNav={closeNav} sidepanelWidth={sidepanelWidth}/>
+    
       {/* left container */}
       <div className={styles.leftContainer}>
         <div style={{ marginBottom: "-40rem" }}>
@@ -68,68 +83,6 @@ export default function Home() {
             <PdfDownload />
           </div>
 
-          {/* hamberger */}
-          {/* <div className={styles.hamberger}>
-            <nav className="navbar-expand-lg navbar-light ">
-              <button
-                className="navbar-toggler bg-dark"
-                type="button"
-                onClick={toggleMenu}
-              >
-                {!menuOpen ? (
-                  <Image
-                    src={MenuImg}
-                    alt="My SVG Image"
-                    width={24}
-                    height={24}
-                  />
-                ) : (
-                  ""
-                )}
-              </button>
-              <div style={{ display: "flex" }}>
-                <div
-                  className={`collapse navbar-collapse bg-white  ${
-                    menuOpen ? "show" : ""
-                  }`}
-                >
-                  <Navbar />
-                  <Chats />
-                  <PdfDownload />
-                  <div className={styles.hambergerProfilecontainer}>
-                    <Profile />
-                  </div>
-                </div>
-                {menuOpen && (
-                  <button
-                    className={`btn  ${styles["closebtn"]}`}
-                    onClick={closeMenu}
-                  >
-                    <Image
-                      src={closeimg}
-                      alt="My SVG Image"
-                      width={24}
-                      height={24}
-                    />
-                  </button>
-                )}
-              </div>
-            </nav>
-            <Image
-              className={styles.HambergerCarlyticsimag}
-              src={Carlyticsimag}
-              alt="My Carlytics Image"
-              width={119}
-              height={22}
-            />
-            <Image
-              className={styles.HambergerCarlyticsimag}
-              src={PlusSign}
-              alt="My PlusSign Image"
-              width={24}
-              height={24}
-            />
-          </div> */}
         </div>
 
         {/* apply profile inside full screen later on */}
