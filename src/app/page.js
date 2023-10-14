@@ -141,7 +141,7 @@ export default function Home() {
       {/* middle container */}
       <div className={styles.mainMiddleContainer}>
         <div className={styles.middleChatSearchContainer}>
-          <div>
+          <div className={styles.firstChildContainer}>
             <ChatSearch />
           </div>
           <div className={styles.bottomSticky}>
