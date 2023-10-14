@@ -3,6 +3,8 @@ import { Profile } from "./Profile";
 import { Chats } from "./Chats";
 import { PdfDownload } from "./PdfDownload";
 import { Navbar } from "./Navbar";
+import logo from "../ImageContainer/logoimg.svg"
+import Image from 'next/image';
 
 const SidePanel = ({ closeNav, sidepanelWidth }) => {
   return (
@@ -15,6 +17,7 @@ const SidePanel = ({ closeNav, sidepanelWidth }) => {
           boxShadow: sidepanelWidth
             ? "350px 0px 100px 100px rgba(15, 17, 31, 0.45)"
             : "",
+            overflow: 'scroll'
         }}
       >
         <div className={styles.sidepanelNav}>
@@ -25,13 +28,32 @@ const SidePanel = ({ closeNav, sidepanelWidth }) => {
               height: "100vh",
             }}
           >
-            <div className={styles.sidepanelNavHorizontal}>
-              <div>
-                <Navbar />
+            {/* need to give this  style={{ paddingTop: '26px', paddingLeft: '24px' }} the close tag not visible bcaz of padding */}
+            <div className={styles.sidepanelNavHorizontal} >
+              <div style={{
+                color: 'black',
+                paddingRight: '20px',
+                alignItems: 'start',
+                display: 'flex',
+                marginBottom: '24px'
+              }}>
+                {/* <Navbar /> */}
+                <Image src={logo} alt="My logo Image" width={160} height={30.23} style={{ color: 'black' }} />
               </div>
-              <div>
-                <button>+ New Chats</button>
+              <div style={{
+                width: '224px',
+                height: '40px',
+                borderRadius: '50px',
+                backgroundColor: '#6BA690'
+              }}>
+                <button style={{ marginTop: '5px', backgroundColor: '#6BA690', border: 'none', color: '#FFFFFF' }}>+ New Chats</button>
               </div>
+              <div >
+                 <Chats/>
+              </div>
+              {/* <div>
+                <PdfDownload/>
+              </div> */}
               <div>
                 <Profile />
               </div>
@@ -45,7 +67,7 @@ const SidePanel = ({ closeNav, sidepanelWidth }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
