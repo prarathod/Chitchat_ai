@@ -30,12 +30,10 @@
   }
   .sidepanelNav{
     display: flex;
-    border: 1px solid red;
   }
 
   .sidepanelNav > div{
     text-align: center;
-    border: 1px solid red;
   }
   
   .sidepanel .closebtn {
