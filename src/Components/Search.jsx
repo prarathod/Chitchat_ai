@@ -7,58 +7,35 @@ import "../Style/font.module.css";
 
 export const Search = () => {
   const [value, setValue] = useState(false);
-  const handleShowTyping = () => {
-    setValue(true);
-  };
 
-  const handleHideTyping = () => {
-    setInterval(() => {
-      setValue(false);
-    }, 3000);
+  const debounce = (delay) => {
+    let timer;
+    setValue(true);
+
+
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        setValue(false);
+      }, delay);
   };
-  // input-group=searchContainerInsidebox
   return (
     <>
-      {value ? <i className={styles.typingtext}>typing...</i> : []}
-      {/* <div className={styles.searchContainer}>
-        <div
-          className={`  d-flex justify-contant-between`}
-          style={{ width: "100" }}
-        >
-          <input
-            type="text"
-            style={styles.inputStyle}
-            placeholder="Send us a Message"
-            onKeyDown={handleShowTyping}
-            onKeyUp={handleHideTyping}
-          />
-          <div className={styles.img}>
-            <Image
-              src={searchbtnimg}
-              alt="My searchbtnimg Image"
-              width={24}
-              height={24}
-              style={{ color: "black" }}
-            />
-          </div>
-        </div>
-      </div> */}
+      {value ? <i className={styles.typingtext} style={{marginLeft:'-13px'}}>typing...</i> : []}
 
-      <div style={{display:'flex'}}>
+      <div style={{ display: "flex" }}>
         <input
           type="text"
           placeholder="Send us a Message"
-          onKeyDown={handleShowTyping}
-          onKeyUp={handleHideTyping}
+          onChange={()=> debounce(1500)}
           className={styles.inputStyle}
         />
         <Image
-              src={searchbtnimg}
-              alt="My searchbtnimg Image"
-              width={24}
-              height={24}
-              style={{ color: "black" }}
-            />
+          src={searchbtnimg}
+          alt="My searchbtnimg Image"
+          width={24}
+          height={24}
+          style={{ color: "black" }}
+        />
       </div>
     </>
   );
