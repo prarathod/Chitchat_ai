@@ -3,6 +3,7 @@
   border: none;
   font-size: 16px;
   font-weight: 400;
+  border: none;
 }
 
 .searchContainer {
@@ -21,12 +22,13 @@
 
 .typingtext {
   padding: 14px 15px;
-  position: fixed;
   bottom: 0;
 
   display: flex;
   margin-left: 3rem;
-  margin-bottom: 70px;
+  position: fixed;
+  color: #6ba690;
+  bottom: 77px;
 }
 .searchinput {
   border-radius: 60px;
@@ -41,13 +43,20 @@
   position: relative;
   width: 80%;
 }
+
 .searchinput:focus {
   outline: none;
 }
+
 .img {
   padding-left: 5rem;
   padding-top: 2px;
 }
+
+.inputStyle:focus {
+  outline: none;
+}
+
 @media (min-width: 1054px) {
   .searchContainer {
     border: 2px solid;
@@ -63,6 +72,7 @@
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.06);
   }
 }
+
 @media (max-width: 770px) {
   .searchContainer {
     position: fixed;
@@ -77,10 +87,16 @@
     margin-right: -38px;
     margin-top: 30rem;
     border-radius: 1px;
+
   }
+  .typingtext {
+    bottom: 55px;
+  }
+
   .searchContainerInsidebox {
     display: flex;
   }
+
   .searchinput {
     padding: 4px 4px;
     border: none;
@@ -91,6 +107,7 @@
     line-height: normal;
     position: relative;
   }
+
   .img img {
     width: 24px;
     height: 24px;
