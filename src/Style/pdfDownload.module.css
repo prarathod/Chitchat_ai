@@ -43,27 +43,22 @@
     background: rgba(255, 255, 255, 0.47);
     padding: 4px 5px 4px;
     text-align: center;
-    /* margin: 4px 18px 6px ; */
     border-radius: 54px;
- 
-   
-
-/* 
-    display: flex;
-    align-items: center;
-    color: #090F1D;
-    font-family: Garet;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: -0.42px;
+}
+.listContainerAstyle{
     text-decoration: none;
-    border: 1px solid rgba(209, 142, 226, 0.24);
-    background: rgba(255, 255, 255, 0.47);
-    padding: 4px 5px; */
 }
 
+@media screen and (max-width: 770px) {
+    .dataConnectionsHeading{
+        padding-left: 20px;
+        text-align: left;
+    }
+    .listContainerAstyle{
+        padding: 0 0 0 10px !important;
+    }
+    
+  }
 
 .iconSignal{
     border-radius: 62%;

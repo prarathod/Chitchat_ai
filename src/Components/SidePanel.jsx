@@ -3,8 +3,9 @@ import { Profile } from "./Profile";
 import { Chats } from "./Chats";
 import { PdfDownload } from "./PdfDownload";
 import { Navbar } from "./Navbar";
-import logo from "../ImageContainer/logoimg.svg"
-import Image from 'next/image';
+import logo from "../ImageContainer/logoimg.svg";
+import Image from "next/image";
+import crossCircle from '../ImageContainer/fi-rr-cross-circle.svg';
 
 const SidePanel = ({ closeNav, sidepanelWidth }) => {
   return (
@@ -13,12 +14,9 @@ const SidePanel = ({ closeNav, sidepanelWidth }) => {
         id="mySidepanel"
         className={styles.sidepanel}
         style={{
-          width: sidepanelWidth + "%",
-          boxShadow: sidepanelWidth
-            ? "350px 0px 100px 100px rgba(15, 17, 31, 0.45)"
-            : "",
-            overflow: 'scroll'
-        }}
+          width: sidepanelWidth + "%",boxShadow: sidepanelWidth
+          ? "350px 0px 100px 100px rgba(15, 17, 31, 0.45)"
+          : "",}}
       >
         <div className={styles.sidepanelNav}>
           <div
@@ -26,48 +24,73 @@ const SidePanel = ({ closeNav, sidepanelWidth }) => {
               flexGrow: 10,
               backgroundColor: "#f3f2f2",
               height: "100vh",
+              // boxShadow: sidepanelWidth
+              //   ? "350px 0px 100px 100px rgba(15, 17, 31, 0.45)"
+              //   : ""
             }}
           >
             {/* need to give this  style={{ paddingTop: '26px', paddingLeft: '24px' }} the close tag not visible bcaz of padding */}
-            <div className={styles.sidepanelNavHorizontal} >
-              <div style={{
-                color: 'black',
-                paddingRight: '20px',
-                alignItems: 'start',
-                display: 'flex',
-                marginBottom: '24px'
-              }}>
+            <div className={styles.sidepanelNavHorizontal}>
+              <div
+                style={{
+                  padding: "20px",
+                  textAlign:'left'
+                }}
+              >
                 {/* <Navbar /> */}
-                <Image src={logo} alt="My logo Image" width={160} height={30.23} style={{ color: 'black' }} />
+                <Image
+                  src={logo}
+                  alt="My logo Image"
+                  width={160}
+                  height={30.23}
+                  style={{ color: "black" }}
+                />
               </div>
-              <div style={{
-                width: '224px',
-                height: '40px',
-                borderRadius: '50px',
-                backgroundColor: '#6BA690'
-              }}>
-                <button style={{ marginTop: '5px', backgroundColor: '#6BA690', border: 'none', color: '#FFFFFF' }}>+ New Chats</button>
+              <div
+                style={{
+                  padding:"5px 30%",
+                  width:'fit-content',
+                  borderRadius: "50px",
+                  backgroundColor: "#6BA690",
+                  textAlign:'center',
+                  margin:'auto',
+                }}
+              >
+                <button
+                  style={{
+                    backgroundColor: "#6BA690",
+                    border: "none",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  + New Chat
+                </button>
               </div>
-              <div >
-                 <Chats/>
+              <div style={{padding:'20px'}}>
+                <Chats />
               </div>
-              {/* <div>
-                <PdfDownload/>
-              </div> */}
               <div>
+                <PdfDownload/>
+              </div>
+              <div style={{padding:'20px'}}>
                 <Profile />
               </div>
             </div>
           </div>
           <div
             onClick={() => closeNav()}
-            style={{ flexGrow: 2, color: "#f3f2f2", paddingTop: "25px" }}
+            style={{
+              flexGrow: 2,
+              color: "#f3f2f2",
+              paddingTop: "25px",
+              paddingLeft: '15px'
+            }}
           >
-            X
+            <Image src={crossCircle} width={24} height={24}/>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

@@ -44,8 +44,8 @@ export const PdfDownload = () => {
       </div>
         {
             pdfData.map((item)=>{
-                return <div className={styles.listcontainer}  >
-                            <a  className='text-decoration-none' href={item.link}   download={item.link}  >
+                return <div className={styles.listcontainer}>
+                            <a  className={styles.listContainerAstyle} href={item.link}   download={item.link}  >
                               <div className={styles.atag} >
                                   <div  className={styles.iconSignal}>
                                     {/* <img src="http://3.135.232.212/images/icon1.png" alt="" /> */}
