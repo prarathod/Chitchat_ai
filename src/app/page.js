@@ -32,7 +32,17 @@ export default function Home() {
   const [sidepanelWidth, setSidepanelWidth] = useState(0);
 
   const openNav = () => {
-    setSidepanelWidth(60);
+   if(window.innerWidth<=400) {
+    setSidepanelWidth(100);
+   }else if(window.innerWidth>=400 && window.innerWidth<=500){
+    setSidepanelWidth(85);
+   }else if(window.innerWidth>=500 && window.innerWidth<=600){
+    setSidepanelWidth(75);
+   }else{
+    setSidepanelWidth(50);
+   }
+
+    
   }
 
   const closeNav = () => {

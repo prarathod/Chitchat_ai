@@ -2,7 +2,6 @@
     border-radius: 20px;
     border: 1px solid rgba(209, 142, 226, 0.13);
     background: rgba(209, 142, 226, 0.05);
-    /* padding: 40px 35px; */
     margin-left: 15px;
     width: 100%;
     padding: 40px 55px;
@@ -22,7 +21,6 @@
         border-radius: 20px;
         border: 1px solid rgba(209, 142, 226, 0.13);
         background: rgba(209, 142, 226, 0.05);
-        /* padding: 40px 35px; */
         margin-left: 15px;
         width: 100%;
         padding: 40px 35px;
@@ -32,7 +30,6 @@
 @media (max-width: 768px) {
     .maincontainer{
         margin-right: 0rem;
-        /* background-color: aqua; */
         margin-top: 14px;
        
     } 

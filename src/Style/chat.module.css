@@ -1,3 +1,7 @@
+.textwrappermain{
+    padding:30px 20px 20px;
+}
+
 .textwrapper{
     color: #090F1D;
     font-family: Helvetica;
@@ -21,11 +25,11 @@
     color: white;
     display: flex;
 }
+.chatSectionContainer{
+    padding:0px 30px 20px 20px;
+}
 .historytext{
     color: rgba(9, 15, 29, 0.70);
-    /* font-family: 'Roboto', sans-serif;
-     */
-     /* font-family: 'Garet', sans-serif; */
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -37,13 +41,16 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-
-    /* color: rgba(9, 15, 29, 0.70);
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.42px; */
-    
 }
+
+@media only screen and (max-width: 600px) {
+  .iconplus{
+    display: none;
+  }
+  .textwrappermain{
+    padding:20px 0px 0px ;
+}
+.chatSectionContainer{
+  padding-left: 6px;
+}
+  }

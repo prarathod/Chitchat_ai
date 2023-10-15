@@ -36,11 +36,11 @@ export const Chats = () => {
   return (
     <div className='border-top '>
 
-        <div className='d-flex justify-content-between' style={{padding:'30px 20px 20px'}}>
+        <div className={`d-flex justify-content-between  ${styles['textwrappermain']}` }>
             <h4 className={styles.textwrapper}   > <b >Chats</b> </h4>                 
             <i className={`bi bi-plus fs-4 ${styles['iconplus']}`} ></i>
         </div>
-        <div style={{padding:'0px 30px 20px 20px'}}>
+        <div className={styles.chatSectionContainer}>
        
         {
                 data.map((item,index)=>{

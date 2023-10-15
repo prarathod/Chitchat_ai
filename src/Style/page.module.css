@@ -3,14 +3,10 @@
 }
 
 .leftContainer {
-  /* width: 20%; */
-
-  /* max-width: 260px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  /* margin-bottom: 40em; */
 }
 
 .leftContainer:before {
@@ -142,8 +138,6 @@
   }
 
   .middleContainer {
-    /* width: auto; */
-    /* margin-top: 4rem; */
     padding: 50px;
     padding-left: 24px;
   }
