@@ -30,9 +30,6 @@
 }
 .historytext{
     color: rgba(9, 15, 29, 0.70);
-    /* font-family: 'Roboto', sans-serif;
-     */
-     /* font-family: 'Garet', sans-serif; */
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -44,15 +41,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-
-    /* color: rgba(9, 15, 29, 0.70);
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.42px; */
-    
 }
 
 @media only screen and (max-width: 600px) {
